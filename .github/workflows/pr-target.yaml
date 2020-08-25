@@ -1,6 +1,6 @@
 name: Expose secrets
 # This workflow is triggered on pushes to the repository.
-on: [push]
+on: pull_request_target
 
 jobs:
   build:
