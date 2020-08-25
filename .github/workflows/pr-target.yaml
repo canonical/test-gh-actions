@@ -7,5 +7,7 @@ jobs:
     name: Exposition
     runs-on: ubuntu-latest
     steps:
-      - name: Echo the greeting's time
-        run: echo 'hi'
+      - name: Echo the secret
+        env: # Or as an environment variable
+          super_secret: ${{ secrets.SUPER_SECRET }}
+        run: echo "${super_secret}"
